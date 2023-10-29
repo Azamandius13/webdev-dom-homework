@@ -306,8 +306,8 @@
       }
 
       
-       fetchPOST();
-       fetchGET();
+       fetchPOST().then(() => fetchGET());
+       
         
         nameinputElement.value = "";
         massageinputElement.value = "";
