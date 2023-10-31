@@ -120,6 +120,11 @@
           commentloaderElement.classList.add('display-none');
           return response;
           })
+          .catch((error) => {
+            alert("Нет интернет соединения");
+            commentloaderElement.textContent = "Нет интернет соединения";
+
+          })
          
       
     }
@@ -128,11 +133,28 @@
           return   fetch("https://wedev-api.sky.pro/api/v1/artemiy-babichev/comments" , {
           method : "POST",
           body : JSON.stringify({
+            forceError: true,
             text : massageinputElement.value,
             name : nameinputElement.value,
           })
+       }).then((response) => {
+          if (response.status === 400) {
+              alert('Поле Имени и Комментариев должно быть больше 3х');
+              return;
+          }else if (response.status === 500){
+              alert('Сервер Упал');
+              return
+          }else 
+            nameinputElement.value = "";
+            massageinputElement.value = "";
+            nameinputElement.classList.remove("errorinput");
+            massageinputElement.classList.remove("errorinput");
+       }).catch((error) => {
+          alert("Нет интернет соединения")
+          addcommentText.classList.add("display-none");
+        containerElement.classList.remove("display-none");
        })
-      } 
+      }
 
     
 
@@ -308,11 +330,6 @@
       
        fetchPOST().then(() => fetchGET());
        
-        
-        nameinputElement.value = "";
-        massageinputElement.value = "";
-        nameinputElement.classList.remove("errorinput");
-        massageinputElement.classList.remove("errorinput");
 
         renderComments();
 
