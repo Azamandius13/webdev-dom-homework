@@ -1,7 +1,6 @@
 import { comments } from "./api.js";
 import { renderComments } from "./rendercomments.js";
 
-
 export const doneImgButtonListnes = () => {
     const donebuttonElements = document.querySelectorAll(".doneimg");
     for ( const donebuttonElement of donebuttonElements ){

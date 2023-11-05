@@ -6,11 +6,9 @@ export const massageinputElement = document.querySelector('.add-form-text');
 export const nameinputElement = document.querySelector('.add-form-name');
 export let comments = [];
 
-
 export function functionDateConverter(date){
   return date.getDate()+ "." + date.getMonth() + "." + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes()
   }
-
 
 export function apiFetchGet() {
         return fetch("https://wedev-api.sky.pro/api/v1/artemiy-babichev/comments" , {

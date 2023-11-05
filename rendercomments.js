@@ -49,21 +49,8 @@ export const renderComments = () => {
       </li>`  
     }).join("").replaceAll('*quoteBegin*','<div class="quote_container"> ' ).replaceAll('*quoteEnd*','</div>' );
     comments_containerElement.innerHTML = commentshtml;
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     const likebuttonElements = document.querySelectorAll('.like-button')
-    
     
     likebuttonListners(likebuttonElements);
     editbuttonListners();
