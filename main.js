@@ -11,7 +11,6 @@ const comments_containerElement = document.querySelector('.comments');
 const massage_sendButton = document.querySelector('.add-form-button');
 const lastcommentDeletebutton = document.querySelector('.deletelastcomment');
 massage_sendButton.disabled = true;
-const likebuttonElements = document.querySelectorAll('.like-button');
 addcommentText.classList.add("display-none");
 
 apiFetchGet();
