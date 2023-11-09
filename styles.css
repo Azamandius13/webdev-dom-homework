@@ -100,6 +100,67 @@ body {
   flex-direction: column;
 }
 
+.login-form {
+  width: 560px;
+  padding: 20px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    75.42% 75.42% at 50% 42.37%,
+    rgba(53, 53, 53, 0) 22.92%,
+    #7334ea 100%
+  );
+  border-radius: 20px;
+}
+
+.login-input {
+  padding: 10px 10px 10px 20px;
+  font-size: 16px;
+  font-family: Helvetica;
+  border-radius: 8px;
+  border: none;
+}
+
+.auth_button {
+  margin-top: 24px;
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #bcec30;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.password-input {
+  padding: 10px 10px 10px 20px;
+  margin-top : 30px;
+  font-size: 16px;
+  font-family: Helvetica;
+  border-radius: 8px;
+  border: none;
+}
+
+.registration_button {
+  margin-top: 30px;
+  cursor: pointer;
+  color: rgb(213, 247, 119)
+}
+
+.authorisation_title_button {
+  margin-top: 30px;
+  cursor: pointer;
+  color: rgb(213, 247, 119)
+}
+
+.regtitle {
+  margin-top: 30px;
+}
+
+.authtitle {
+  margin-top: 30px;
+}
+
 .add-form-name,
 .add-form-text {
   font-size: 16px;

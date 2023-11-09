@@ -3,9 +3,11 @@ import { doneImgButtonListnes } from "./doneimgListners.js";
 import { likebuttonListners } from "./likebuttons_listners.js";
 import { editbuttonListners } from "./editButtonsListners.js";
 import { quoteElementsListners } from "./quoteListners.js";
+
 export const comments_containerElement = document.querySelector('.comments');
 
 export const renderComments = () => {
+      
     const commentshtml = comments.map((comment , index) => {
       let isEditClass;
       let massageHideClass;
@@ -18,7 +20,6 @@ export const renderComments = () => {
         isEditClass = ""
         massageHideClass = "display-none"
         doneHideClass = ""
-  
       }
   
       return `
@@ -48,6 +49,7 @@ export const renderComments = () => {
         </div>
       </li>`  
     }).join("").replaceAll('*quoteBegin*','<div class="quote_container"> ' ).replaceAll('*quoteEnd*','</div>' );
+    
     comments_containerElement.innerHTML = commentshtml;
     
     const likebuttonElements = document.querySelectorAll('.like-button')
