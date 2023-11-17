@@ -1,5 +1,7 @@
 import { renderComments } from "./rendercomments.js";
 import { addFormContainerElement } from "./main.js";
+import { format } from "date-fns";
+
 export const commentloaderElement = document.querySelector('.comment-loader-text')
 export const addcommentText = document.querySelector('.add-comment-text');
 export const containerElement = document.querySelector('.add-form');
@@ -20,7 +22,7 @@ export const setName = (userNameAuth) => {
 
 
 export function functionDateConverter(date){
-  return date.getDate()+ "." + date.getMonth() + "." + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes()
+  return date.getDate()+ "." + date.getMonth() + "." + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
   }
 
 export function apiFetchGet() {
@@ -41,7 +43,7 @@ export function apiFetchGet() {
                let appComments = responseData.comments.map((comment) => {
                 return {
                   name: comment.author.name,
-                  date: functionDateConverter(new Date(comment.date)),
+                  date: format(new Date(comment.date) , 'yyyy-MM-dd hh.mm.ss' ),
                   massage : comment.text,
                   isLike : comment.isLiked,
                   likeCounter : comment.likes,

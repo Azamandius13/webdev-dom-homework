@@ -9,38 +9,39 @@
   <body>
     <div class="container">
       <h2 class="comment-loader-text">Комментарии загружаются...</h2>
-      <ul class="comments">
-      </ul>
+      <ul class="comments"></ul>
       <h2 class="add-comment-text">Комментарий добавляется...</h2>
-      <div class="authtitle"><a class="regtitle">Для оставления коментариев  <a class="authorisation_title_button">Авторизуйтесь</a></a></div>
+      <div class="authtitle">
+        <a class="regtitle"
+          >Для оставления коментариев
+          <a class="authorisation_title_button">Авторизуйтесь</a></a
+        >
+      </div>
       <div class="add-form-container display-none">
         <div class="add-form">
-              <input
-                type="text"
-                class="add-form-name"
-                placeholder="Введите ваше имя"
-                disabled
-              />
-              <textarea
-                type="textarea"
-                class="add-form-text"
-                placeholder="Введите ваш коментарий"
-                rows="4"
-              ></textarea>
-              <div class="add-form-row">
-                <button class="add-form-button">Написать</button>
-              </div>
-              <button class="deletelastcomment">Удалить последний комментарий</button>
+          <input
+            type="text"
+            class="add-form-name"
+            placeholder="Введите ваше имя"
+            disabled
+          />
+          <textarea
+            type="textarea"
+            class="add-form-text"
+            placeholder="Введите ваш коментарий"
+            rows="4"
+          ></textarea>
+          <div class="add-form-row">
+            <button class="add-form-button">Написать</button>
+          </div>
+          <button class="deletelastcomment">
+            Удалить последний комментарий
+          </button>
         </div>
+      </div>
+      <div class="loginformcontainer"></div>
     </div>
-    <div class="loginformcontainer">
-      
-  </div>
-    </div>
-
-    
   </body>
 
-  <script type="module" src="main.js"></script>
-
+  <script type="module" src="./dist/main.js"></script>
 </html>
